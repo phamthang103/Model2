@@ -1,4 +1,4 @@
-package Thuc_Hanh1;
+package ThucHanh;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;

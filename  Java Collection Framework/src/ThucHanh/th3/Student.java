@@ -1,15 +1,11 @@
-package ThucHanh.th2;
+package ThucHanh.th3;
 
-public class Student {
+public class Student implements Comparable<Student> {
     private String name;
-    private int age;
+    private Integer age;
     private String address;
 
-    public Student() {
-    }
-
-    public Student(String name, int age, String address) {
-        super();
+    public Student(String name, Integer age, String address) {
         this.name = name;
         this.age = age;
         this.address = address;
@@ -23,11 +19,11 @@ public class Student {
         this.name = name;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
@@ -41,7 +37,12 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student@name=" + name + ",age=" + age + ",address=" + address;
+        return "Student{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+    @Override
+    public int compareTo(Student o) {
+        return this.getName().compareTo(o.getName());
     }
 }
-
